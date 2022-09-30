@@ -13,8 +13,8 @@ L'EC2 a un serveur nginx déployé dessus.
 Le serveur est accessible à l'IP publique renseignée dans le fichier ip_ec2.txt
 
 Variables modifiables dans le terraform.tfvars :
-*instance_type = Le type d'instance pour l'EC2
-*ebs_size = La taille de l'EBS
-*region = La région AWS
-*maintainer = Le tag rajouté aux ressources créées
-*availability_zone = L'AZ pour l'EC2 et l'EBS
+* instance_type = Le type d'instance pour l'EC2
+* ebs_size = La taille de l'EBS
+* region = La région AWS
+* maintainer = Le tag rajouté aux ressources créées
+* availability_zone = L'AZ pour l'EC2 et l'EBS
