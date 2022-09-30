@@ -2,4 +2,5 @@ app/*.pem
 app/*.txt
 *.txt
 app/.terraform.lock.hcl
-app/.terraform/
+*/.terraform*
+*/terraform.tfstate*
