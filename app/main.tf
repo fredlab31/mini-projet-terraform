@@ -14,33 +14,33 @@ provider "aws" {
 }
 
 module "keygen" {
-  source = "../modules/keygen"
+  source     = "../modules/keygen"
   maintainer = var.maintainer
 }
 
 module "ebs" {
-  source = "../modules/ebs"
+  source                = "../modules/ebs"
   ebs_availability_zone = var.availability_zone
-  ebs_size = var.ebs_size
-  maintainer = var.maintainer
+  ebs_size              = var.ebs_size
+  maintainer            = var.maintainer
 }
 
 module "ec2" {
-  source = "../modules/ec2"
-  instance_type = var.instance_type
-  maintainer = var.maintainer
-  key_name = module.keygen.output_key_name
+  source            = "../modules/ec2"
+  instance_type     = var.instance_type
+  maintainer        = var.maintainer
+  key_name          = module.keygen.output_key_name
   availability_zone = var.availability_zone
-  public_ip = module.eip.output_eip_ip
+  public_ip         = module.eip.output_eip_ip
 }
 
 module "eip" {
-  source = "../modules/eip"
+  source     = "../modules/eip"
   maintainer = var.maintainer
 }
 
 module "sg" {
-  source = "../modules/sg"
+  source     = "../modules/sg"
   maintainer = var.maintainer
 }
 
